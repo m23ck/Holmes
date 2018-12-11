@@ -1,0 +1,14 @@
+{
+  "name": "holmes",
+  "version": "1.0.0",
+  "description": "user search desktop app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "m23ck",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^3.0.11"
+  }
+}

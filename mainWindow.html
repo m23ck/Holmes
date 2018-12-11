@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Holmes</title>
+
+</head>
+<body>
+    <h1>Holmes</h1>
+
+
+    <form>
+        <div>
+            <input type="text" id="search_entity" placeholder="What do you wish to find?" autofocus>
+            
+        </div>
+
+        <button type="submit">Search</button>
+        
+        <div id="hint">
+            <p>example: John Doe</p>
+        </div>
+
+    </form>
+
+
+    <div id="history">
+        <ul></ul>
+    </div>
+
+    <script>
+        const electron = require('electron');;
+        const {ipcRenderer} =electron;
+        const ul = document.querySelector('ul');
+
+        const form = document.querySelector('form');
+        form.addEventListener('submit', submitForm);
+        function submitForm(e){
+            e.preventDefault();
+
+        //grab the input
+            //send the input to the main.js file
+            const entity_to_search = document.querySelector('#search_entity').value;
+            ipcRenderer.send('entity_to_search', entity_to_search);
+         
+            //receive the value of the input
+
+        }
+    </script>
+
+
+
+</body>
+</html>
