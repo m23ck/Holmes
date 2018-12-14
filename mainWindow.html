@@ -6,22 +6,32 @@
     <title>Holmes</title>
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
     <link rel="stylesheet" type="text/css" href="Local_Dependencies/Bootstrap-CSS/css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="main.css" >
+
 </head>
 <body>
     <div class="container">
-        <h1>Holmes</h1>
+
+        <h1 id="title_">Holmes</h1>
 
 
         <form>
-            <div>
-                <input type="text" id="search_entity" placeholder="What do you wish to find?" autofocus>
-                
-            </div>
-
-            <button type="submit">Search</button>
             
+            <div class="input-group mb-3">
+
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-default">I'm looking for </span>
+                </div>
+
+                <input type="text" class="form-control" id="search_entity" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            
+                <button type="submit" class="btn btn-secondary">Search</button>
+             
+            </div>
+           
+                      
             <div id="hint">
-                <p>example: John Doe</p>
+                    <p class="text-muted">example: John Doe</p>
             </div>
 
         </form>
