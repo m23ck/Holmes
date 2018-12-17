@@ -34,6 +34,7 @@ const path = require("path");
  ipcMain.on('entity_to_search', function(e, entity){
     mainWindow.webContents.send('entity_to_search', entity);
     console.log(entity);
+    //the receiving end of this doesn't work yet, die console.log lukt gelukkig wel
 
  } );
 
